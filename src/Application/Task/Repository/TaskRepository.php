@@ -23,7 +23,7 @@ class TaskRepository implements TaskRepositoryInterface
     public function getTask(string $id): Task
     {
         $task = $this->mapper->getTask($id);
-        if ($this === null) {
+        if ($task === null) {
             throw new TaskNotFoundException();
         }
 
